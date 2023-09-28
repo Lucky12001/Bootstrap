@@ -1,0 +1,120 @@
+        
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EMI Calculator</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <!-- <script>
+       function bodyload() {
+        var yourWeight = parseInt(prompt("Enter Weight "));
+        var yourStatus = document.getElementById("yourStatus");
+        if(yourWeight < 53) {
+            yourStatus.style.marginLeft = "200px";
+        } else if (yourWeight > 54 && yourWeight <70) {
+            yourStatus.style.marginLeft = "600px"
+        }
+       }
+    </script> -->
+    <style>
+        .box {
+            background-color: white;
+            box-shadow: 6px 6px 3px gray;
+            padding: 20px;
+        }
+    </style>
+    <!-- Include your JavaScript file -->
+    <script src="../src/scripts/emi.js" type="text/javascript"></script>
+</head>
+<body class="container-fluid" onload="bodyload()">
+    <div class="box">
+        <h1>Personal Loan EMI Calculator</h1>
+        <div class="row">
+            <div class="col">
+                <!-- Input for loan amount -->
+                Amount you need &#8377; <input type="text" onchange="AmountTextBoxChanged()" id="txtAmount" size="10">
+            </div>
+            <div class="col">
+                <!-- Input for loan tenure in years -->
+                for <input type="text" onchange="YearsTextBoxChanged()" id="txtYears" size="2"> years
+            </div>
+            <div class="col">
+                <!-- Input for interest rate -->
+                interest rate <input type="text" onchange="RateTextBoxChanged()" id="txtRate" size="4"> %
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col">
+                <div class="d-flex">
+                    <span>&#8377; 50,000</span>
+                    <!-- Slider for loan amount -->
+                    <input type="range" onchange="AmountChange()" id="rangeAmount" style="width: 150px;" class="form-range" value="50000" min="50000" max="1000000">
+                    <span>&#8377; 10,00,000</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex">
+                    <span>1</span>
+                    <!-- Slider for loan tenure in years -->
+                    <input type="range" onchange="YearsChange()" id="rangeYears" style="width: 150px;" class="form-range" value="1" min="1" max="5">
+                    <span>5</span>
+                </div>
+            </div>
+            <div class="col">
+                <div class="d-flex">
+                    <span>10.25</span>
+                    <!-- Slider for interest rate -->
+                    <input type="range" id="rangeRate" onchange="RateChange()" style="width: 150px;" class="form-range" value="10.25" step="0.1" min="10.25" max="18.45">
+                    <span>18.45</span>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-4">
+            <div class="col text-center">
+                <!-- Calculate button -->
+                <button onclick="CalculateClick()" class="btn btn-primary">Calculate</button>
+            </div>
+        </div>
+    </div>
+    <!-- Display result -->
+    <p class="mt-3 text-center" style="font-size: 30px;" id="result"></p>
+
+<!-- <div class="container-fluid mt-5">
+ <hr>
+</div>
+<div class="container-fluid mt-4" >
+    <h2>BMI Status</h2>
+    <div class="progress" >
+
+        <div class="progress-bar bg-dark me-1" style="width: 400px;">
+            Underweight below 53 kg
+        </div>
+        <div class="progress-bar bg-success me-1" style="width: 400px;">
+            Normal Weight 54 to 70 kg
+        </div>
+        <div class="progress-bar bg-warning me-1" style="width: 400px;">
+            Overweight 70 to 86 kg
+        </div>
+        <div class="progress-bar bg-danger" style="width: 400px;">
+            Obese above 86 kg
+        </div>
+    </div>
+    <div>
+        <div id="yourStatus">
+            <span class="bi bi-caret-down-fill"></span>
+        <div>You</div>
+        </div>
+    </div>
+</div> -->
+
+
+    
+       
+
+</body>
+</html>

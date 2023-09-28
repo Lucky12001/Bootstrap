@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountryNumber</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+     <script>
+        function CountryChanged() {
+    
+    var countryName = document.getElementById("lstCountries").value;
+    var flag = document.getElementById("flag");
+    if (countryName == "India") {
+    flag.src = "images/R.png";
+}
+ else if(countryName =="U.S") {
+    flag.src = "images/usflag.png";
+} 
+else if (countryName =="U.K") {
+    flag.src = "images/uk.png";
+}
+}
+     </script>
+</head>
+<body class="container-fluid">
+    <h1>Verify Mobile Number</h1>
+    <dl class="w-50">
+        <dt>Your Country</dt>
+        <dd class="input-group">
+            <select id="lstCountries" class="form-select" onchange="CountryChanged()">
+                <option >Select Country</option>
+                <option >India</option>
+                <option >U.S</option>
+                <option >U.K</option>
+            </select>
+            <img  width="80" id="flag" height="40" border="1" class="input-group-text">
+        </dd>
+        <dt>Your Mobile</dt>
+        <dd>
+            <input type="text" class="form-control" id="txtMobile">
+        </dd>
+    </dl>
+    <button class="btn btn-primary">Register</button>
+</body>
+</html>

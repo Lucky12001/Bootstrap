@@ -1,0 +1,89 @@
+ <!---  <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Format</title>
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        .dark-theme {
+            padding: 10px;
+            background-color: black;
+            color: white;
+        }
+    </style>               
+    <script>
+     function ThemeChange() {
+        var ThemeCheckbox = document.getElementById("ThemeCheckbox");
+        var frmLogin = document.getElementById("frmLogin");
+        if(ThemeCheckbox.checked) {
+           frmLogin.className = "dark-theme";
+        }   else {
+            frmLogin.className = "p-3";
+            loginButton.className= "btn btn-dark w-100";   
+        }  
+     }
+    </script>
+</head>
+<body class="container-fluid">
+    <div class="d-flex justify-content-center align-items-center" style="height: 400px;">
+        <form id="frmLogin">
+            
+            <div class="form-switch">
+                <input type="checkbox" onchange="ThemeChange()" id="ThemeCheckbox" class="form-check-input"> Dark Theme
+            </div>
+            <h2><span class="bi bi-personal-fill"></span> User Login</h2>
+            <dl>
+                <dt>User Name</dt>
+                <dd><input type="text" class="form-control"></dd>
+                <dt>Password</dt>
+                <dd><input type="password" class="form-control"></dd>
+            </dl>
+            <button class="btn btn-dark w-100">Login</button>
+        </form>
+    </div>
+    
+</body>
+</html>     --> 
+
+<!--    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String</title>
+    <script>
+        function SubmitClick() {
+            var UserName = document.getElementById("UserName").value;
+            var UserError = document.getElementById("UserError");
+            if (UserName == "") {
+                UserError.innerHTML = "Name is too short (min 4 characters)".fontcolor('red');
+            } else {
+                document.write("Registered...");
+            }
+        }
+
+        function VerifyName() {
+            var UserName = document.getElementById("UserName").value;
+            var UserError = document.getElementById("UserError");
+            if (UserName.length < 4) {
+                UserError.innerHTML = "Name too short (min 4 characters)".fontcolor('red');
+            } else if (UserName.length > 10) {
+                UserError.innerHTML = "Name too long (max 10 characters)".fontcolor('red');
+            } else {
+                UserError.innerHTML = ""; // Clear error message
+            }
+        }
+    </script>
+</head>
+<body>
+    <dl>
+        <dt>User Name</dt>
+        <dd><input type="text" onkeyup="VerifyName()" id="UserName"></dd>
+        <dd id="UserError"></dd>
+    </dl>
+    <button onclick="SubmitClick()">Submit</button>
+</body>
+</html> 
+-->
